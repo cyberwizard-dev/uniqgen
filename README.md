@@ -85,7 +85,7 @@ generating random Nigerian details such as names, email addresses, phone numbers
 Install the package using Composer:
 
 ```bash
-composer require cyber/uniqgen
+composer require cyber/uniqgen:dev-main
 ```
 
 ## Usage
@@ -164,7 +164,7 @@ values.
 Install the package using Composer:
 
 ```bash
-composer require cyber/uniqgen
+composer require cyber/uniqgen:dev-main
 ```
 
 ## Usage
