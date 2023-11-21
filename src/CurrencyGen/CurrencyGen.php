@@ -27,7 +27,7 @@ class CurrencyGen
     public static function bigMoney(): string
     {
         $amount = mt_rand(100000, 1000000000);
-        return self::showNaira($amount);
+        return self::formatNaira($amount);
     }
 
     /**
@@ -38,7 +38,21 @@ class CurrencyGen
     public static function smallMoney(): string
     {
         $amount = mt_rand(100, 1000);
-        return self::showNaira($amount);
+        return self::formatNaira($amount);
+    }
+
+    /**
+     * Formats a value as Nigerian Naira (NGN).
+     *
+     * @param float $value The value to be formatted.
+     * @return string The formatted value in NGN format (e.g., ₦1,000.00).
+     */
+    private static function formatNaira($value): string
+    {
+        if (is_numeric($value) && fmod($value, 1) === 0) {
+            $value = number_format($value, 2);
+        }
+        return '₦' . number_format($value, 2);
     }
 
     /**
