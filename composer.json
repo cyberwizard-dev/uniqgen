@@ -1,7 +1,8 @@
 {
   "name": "cyberwizard/uniqgen",
   "description": "Efficient PHP package for creating secure transaction reference codes effortlessly. Customize code length and format. Supports currency display, random name, email, phone number, bank details, NIN, and BVN generation.",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "version": "1.0.0",
   "license": "MIT",
   "authors": [
     {
