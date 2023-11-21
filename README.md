@@ -91,7 +91,7 @@ composer require cyber/uniqgen
 ## Usage
 
 ```php
-use cyber\DetailsGen;
+use cyber\DetailsGen\DetailsGen;
 
 // Generate a random Nigerian state
 $randomState = DetailsGen::randomNigerianState();
@@ -170,7 +170,7 @@ composer require cyber/uniqgen
 ## Usage
 
 ```php
-use cyber\CurrencyGen;
+use cyber\CurrencyGen\CurrencyGen;
 
 // Create an instance of CurrencyGen
 $currencyGen = new CurrencyGen();
