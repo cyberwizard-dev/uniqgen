@@ -209,7 +209,6 @@ class DetailsGen
         'Obumneme',
         'Chiagozie',
         'Ngozichukwuka',];
-
     private static $nigerianStates = ['Abia',
         'Adamawa',
         'Akwa Ibom',
@@ -248,7 +247,7 @@ class DetailsGen
         'Zamfara',
         'Federal Capital Territory (FCT)'];
 
-static $ministries = array(
+    static $ministries = array(
 'Ministry of Agriculture',
 'Ministry of Aviation',
 'Ministry of Communications and Digital Economy',
@@ -274,9 +273,7 @@ static $ministries = array(
 'Ministry of Women Affairs',
 'Ministry of Works and Housing'
 );
-
-
-static $citiesInNigeria = ['Aba',
+    static $citiesInNigeria = ['Aba',
 'Abeokuta',
 'Abomege',
 'Ado-Ekiti',
@@ -366,8 +363,6 @@ static $citiesInNigeria = ['Aba',
 'Ikom',
 'Ilaro',
 'Iseyin'];
-
-
     static $universities = array(
 'University of Lagos',
 'Ahmadu Bello University',
@@ -423,8 +418,7 @@ static $citiesInNigeria = ['Aba',
 'Ladoke Akintola University of Technology',
 'Federal University, Oye-Ekiti'
 );
-
-static $polytechnics = array(
+    static $polytechnics = array(
 'Yaba College of Technology',
 'Federal Polytechnic, Ilaro',
 'Federal Polytechnic, Nekede',
@@ -476,6 +470,95 @@ static $polytechnics = array(
 'Ondo State College of Health Technology',
 'Imo State College of Health Sciences and Technology'
 );
+
+    private static array $departments = [
+        'Human Resources',
+        'Finance',
+        'Marketing',
+        'Sales',
+        'Operations',
+        'Information Technology',
+        'Customer Service',
+        'Research and Development',
+        'Legal',
+        'Procurement',
+        'Quality Assurance',
+        'Administration',
+        'Public Relations',
+        'Product Management',
+        'Supply Chain',
+        'Training and Development',
+        'Business Development',
+        'Project Management',
+        'Creative Services',
+        'Facilities Management',
+    ];
+
+    private static array $companies = [
+        'Acme Corporation',
+        'Global Industries',
+        'Tech Solutions Inc.',
+        'Innovative Innovations',
+        'Apex Enterprises',
+        'Pinnacle Co.',
+        'MegaCorp',
+        'Alpha Omega Ltd.',
+        'Vanguard Ventures',
+        'Elevate Enterprises',
+        'Prime Industries',
+        'NexGen Technologies',
+        'Spectrum Group',
+        'Strategic Solutions',
+        'Summit Enterprises',
+        'FirstClass Services',
+        'Visionary Inc.',
+        'ProActive Systems',
+        'Dynamic Ventures',
+        'United Enterprises',
+        'FutureTech Solutions',
+        'Precision Partners',
+        'Synergy Corporation',
+        'Golden Gate Enterprises',
+        'Supreme Solutions',
+        'Maxim Industries',
+        'Mastermind Co.',
+        'Elite Innovations',
+        'Infinite Technologies',
+        'Emerald Enterprises',
+        'Atlas Group',
+        'Excellence Inc.',
+        'Starlight Systems',
+        'Empire Corporation',
+        'Epic Solutions',
+        'Echelon Enterprises',
+        'Sovereign Industries',
+        'Astra Corp.',
+        'Zenith Innovations',
+        'Jupiter Enterprises',
+        'Envision Group',
+        'Vertex Solutions',
+        'Apex Industries',
+        'Omega Corporation',
+        'Global Innovators',
+        'Polaris Enterprises',
+        'Noble Systems',
+        'Frontier Group',
+        'Synergy Solutions',
+        'Vitality Inc.',
+        'Silverstone Corporation',
+        'Excalibur Enterprises',
+    ];
+
+    public static function RandomWorkDepartment(): string
+    {
+        return self::$departments[array_rand(self::$departments)];
+    }
+
+    public static function RandomCompany(): string
+    {
+        return self::$companies[array_rand(self::$companies)];
+    }
+    
 
     /**
      * Generates a random Nigerian state.
