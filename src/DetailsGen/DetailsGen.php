@@ -1,6 +1,7 @@
 <?php
 
 namespace cyber\DetailsGen;
+
 class DetailsGen
 {
 
