@@ -1,0 +1,14 @@
+{
+  "name": "cyber/uniqgen",
+  "description": "Efficient Laravel package for creating unique and secure transaction reference codes effortlessly",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "cyberwizard",
+      "email": "eminibest@gmail.com"
+    }
+  ],
+  "require": {
+  }
+}
