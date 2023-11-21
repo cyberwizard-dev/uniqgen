@@ -558,7 +558,7 @@ class DetailsGen
     {
         return self::$companies[array_rand(self::$companies)];
     }
-    
+
 
     /**
      * Generates a random Nigerian state.
