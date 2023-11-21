@@ -10,6 +10,10 @@
       "email": "eminibest@gmail.com"
     }
   ],
-  "require": {
+  "autoload": {
+    "psr-4": {
+      "cyber\\DetailsGen\\": "src/DetailsGen/",
+      "cyber\\CurrencyGen\\": "src/CurrencyGen/"
+    }
   }
 }
