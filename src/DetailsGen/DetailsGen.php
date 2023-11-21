@@ -508,9 +508,8 @@ static $polytechnics = array(
      */
     public static function generateRandomEmail(): string
     {
-        $randomLastNames = self::$lastNames[array_rand(self::$lastNames)];
-        $randomLastName = $randomLastNames[array_rand($randomLastNames)];
-        $randomFirstName = $randomLastName[array_rand($randomLastName)];
+        $randomLastName = self::$lastNames[array_rand(self::$lastNames)];
+        $randomFirstName = self::$firstNames[array_rand(self::$firstNames)];
 
         $randomProvider = self::$emailProviders[array_rand(self::$emailProviders)];
 
