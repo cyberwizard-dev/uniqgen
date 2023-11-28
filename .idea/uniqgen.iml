@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/CurrencyGen" isTestSource="false" packagePrefix="Cyber\CurrencyGen\" />
       <sourceFolder url="file://$MODULE_DIR$/src/DetailsGen" isTestSource="false" packagePrefix="Cyber\DetailsGen\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
