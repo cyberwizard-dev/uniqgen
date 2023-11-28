@@ -1,6 +1,6 @@
 <?php
 
-namespace cyber\CurrencyGen;
+namespace Cyber\CurrencyGen;
 
 class CurrencyGen
 {
