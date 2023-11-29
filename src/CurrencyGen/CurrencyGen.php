@@ -91,7 +91,7 @@ class CurrencyGen
             $randomString .= $characterSet[rand(0, strlen($characterSet) - 1)];
         }
 
-        return $timestamp . $microseconds . $randomString . $processId;
+        return str_shuffle($timestamp . $microseconds . $randomString . $processId);
     }
 
 
