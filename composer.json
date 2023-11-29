@@ -12,8 +12,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "Cyber\\DetailsGen\\": "src/DetailsGen/",
-      "Cyber\\CurrencyGen\\": "src/CurrencyGen/"
+      "Cyber\\DetailsGen\\": "src/Cyber/DetailsGen/",
+      "Cyber\\CurrencyGen\\": "src/Cyber/CurrencyGen/"
     }
   }
 }
