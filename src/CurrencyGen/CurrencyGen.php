@@ -60,13 +60,13 @@ class CurrencyGen
      *
      * @return string The generated transaction reference.
      */
-    public static function getTransactionReference($isAlphaNumeric = true, $length = 20): string
+    public static function getTransactionReference($isAlphaNumeric = true, $length = 30): string
     {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $numericCharacters = '0123456789';
 
-        $timestamp = date('YmdHis');
-        $microseconds = sprintf('%06d', microtime(true) * 1000000);
+        $timestamp = date('Ymd');
+        $microseconds = sprintf('%03d', microtime(true) * 1000);
 
         $processId = getmypid();
         $fixedLength = strlen($timestamp . $microseconds . $processId);
