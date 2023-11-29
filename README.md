@@ -85,12 +85,14 @@ generating random Nigerian details such as names, email addresses, phone numbers
 Install the package using Composer:
 
 ```bash
-composer require cyber/uniqgen:dev-main
+composer require cyberwizard/uniqgen:dev-main
 ```
 
 ## Usage
 
 ```php
+require_once __DIR__ . '/vendor/autoload.php';
+
 use cyber\DetailsGen\DetailsGen;
 
 // Generate a random Nigerian state
@@ -164,12 +166,14 @@ values.
 Install the package using Composer:
 
 ```bash
-composer require cyber/uniqgen:dev-main
+composer require cyberwizard/uniqgen:dev-main
 ```
 
 ## Usage
 
 ```php
+require_once __DIR__ . '/vendor/autoload.php';
+
 use cyber\CurrencyGen\CurrencyGen;
 
 // Create an instance of CurrencyGen
@@ -182,10 +186,10 @@ $randomNGNAmount = CurrencyGen::bigMoney();
 $randomSmallNGNAmount = CurrencyGen::smallMoney();
 
 // Generate a random alphanumeric transaction reference
-$randomAlphaNumericReference = $currencyGen->getTransactionReference();
+$randomAlphaNumericReference = CurrencyGen::getTransactionReference();
 
 // Generate a random numeric transaction reference
-$randomNumericReference = (new CurrencyGen(false))->getTransactionReference();
+$randomNumericReference = CurrencyGen::getTransactionReference(false);
 
 // Format a value as Nigerian Naira (NGN)
 $formattedNGNValue = CurrencyGen::showNaira(1000);
