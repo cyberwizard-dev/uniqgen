@@ -60,7 +60,7 @@ class CurrencyGen
      *
      * @return string The generated transaction reference.
      */
-    public static function getTransactionReference($isAlphaNumeric = true, $length = 13): string
+    public static function getTransactionReference($isAlphaNumeric = true, $length = 20): string
     {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $numericCharacters = '0123456789';
@@ -68,12 +68,15 @@ class CurrencyGen
         $timestamp = date('YmdHis');
         $microseconds = sprintf('%06d', microtime(true) * 1000000);
 
-        $remainingLength = $length - strlen($timestamp . $microseconds);
-
-        // If process ID is too long, reduce the remaining length
         $processId = getmypid();
-        if ($remainingLength < strlen($processId)) {
-            $remainingLength = max(0, $remainingLength);
+        $fixedLength = strlen($timestamp . $microseconds . $processId);
+
+        $remainingLength = $length - $fixedLength;
+
+        // If remaining length is negative, reduce the length of processId
+        if ($remainingLength < 0) {
+            $processId = substr($processId, 0, strlen($processId) + $remainingLength);
+            $remainingLength = 0;
         }
 
         $randomString = '';
