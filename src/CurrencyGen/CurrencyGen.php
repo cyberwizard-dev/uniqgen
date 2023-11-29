@@ -62,8 +62,9 @@ class CurrencyGen
      */
     public static function getTransactionReference($isAlphaNumeric = true, $length = 13): string
     {
-
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        $numericCharacters = '0123456789';
+
         $randomString = '';
 
         $timestamp = date('YmdHis');
@@ -72,19 +73,20 @@ class CurrencyGen
         $remainingLength = $length - strlen($timestamp . $microseconds);
 
         if ($isAlphaNumeric) {
-            for ($i = 0; $i < $remainingLength; $i++) {
-                $randomString .= $characters[rand(0, strlen($characters) - 1)];
-            }
+            $characterSet = $characters;
         } else {
-            $min = pow(10, $remainingLength - 1);
-            $max = pow(10, $remainingLength) - 1;
-            $randomString = (string)rand($min, $max);
+            $characterSet = $numericCharacters;
+        }
+
+        for ($i = 0; $i < $remainingLength; $i++) {
+            $randomString .= $characterSet[rand(0, strlen($characterSet) - 1)];
         }
 
         $processId = getmypid();
 
         return $timestamp . $microseconds . $processId . $randomString;
     }
+
 
     /**
      * Formats a value as Nigerian Naira (NGN).
