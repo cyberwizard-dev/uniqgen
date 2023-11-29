@@ -65,12 +65,18 @@ class CurrencyGen
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $numericCharacters = '0123456789';
 
-        $randomString = '';
-
         $timestamp = date('YmdHis');
         $microseconds = sprintf('%06d', microtime(true) * 1000000);
 
         $remainingLength = $length - strlen($timestamp . $microseconds);
+
+        // If process ID is too long, reduce the remaining length
+        $processId = getmypid();
+        if ($remainingLength < strlen($processId)) {
+            $remainingLength = max(0, $remainingLength);
+        }
+
+        $randomString = '';
 
         if ($isAlphaNumeric) {
             $characterSet = $characters;
@@ -82,9 +88,7 @@ class CurrencyGen
             $randomString .= $characterSet[rand(0, strlen($characterSet) - 1)];
         }
 
-        $processId = getmypid();
-
-        return $timestamp . $microseconds . $processId . $randomString;
+        return $timestamp . $microseconds . $randomString . $processId;
     }
 
 
