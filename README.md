@@ -93,7 +93,7 @@ composer require cyberwizard/uniqgen:dev-main
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use cyber\DetailsGen\DetailsGen;
+use Cyber\DetailsGen\DetailsGen;
 
 // Generate a random Nigerian state
 $randomState = DetailsGen::randomNigerianState();
@@ -174,7 +174,7 @@ composer require cyberwizard/uniqgen:dev-main
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use cyber\CurrencyGen\CurrencyGen;
+use Cyber\CurrencyGen\CurrencyGen;
 
 // Create an instance of CurrencyGen
 $currencyGen = new CurrencyGen();
@@ -185,7 +185,7 @@ $randomNGNAmount = CurrencyGen::bigMoney();
 // Generate a small random amount of money in NGN
 $randomSmallNGNAmount = CurrencyGen::smallMoney();
 
-// Generate a random alphanumeric transaction reference
+// Generate a random alphanumric transaction reference
 $randomAlphaNumericReference = CurrencyGen::getTransactionReference();
 
 // Generate a random numeric transaction reference
